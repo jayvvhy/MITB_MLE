@@ -9,27 +9,66 @@ from dateutil.relativedelta import relativedelta
 import pprint
 import pyspark
 import pyspark.sql.functions as F
-import argparse
+from pyspark.sql import SparkSession
+from pyspark.sql import DataFrame
+from pyspark.sql.functions import col, to_date, when, lit, coalesce, size, split, explode, collect_set, array_contains, regexp_replace, round, regexp_extract
+from pyspark.sql.types import *
+from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler
+from pyspark.ml import Pipeline
+from pyspark.ml.functions import vector_to_array
+import re
+import yaml
+import logging
 
-from pyspark.sql.functions import col
-from pyspark.sql.types import StringType, IntegerType, FloatType, DateType
+logger = logging.getLogger(__name__)
 
+def process_bronze_tables(raw_data_dir: str, bronze_dir: str, spark: SparkSession):
+    """
+    Process raw CSVs into Bronze Parquet tables, partitioned by snapshot_date.
 
-def process_bronze_table(snapshot_date_str, bronze_lms_directory, spark):
-    # prepare arguments
-    snapshot_date = datetime.strptime(snapshot_date_str, "%Y-%m-%d")
+    Args:
+        raw_data_dir (str): Path to folder containing the raw CSVs.
+        bronze_dir (str): Base path to save Bronze tables.
+        spark (SparkSession): Active Spark session.
+    """
+    logger.info("Starting bronze layer processing...")
     
-    # connect to source back end - IRL connect to back end source system
-    csv_file_path = "data/lms_loan_daily.csv"
+    # Map of raw filenames -> bronze table names
+    datasets = {
+        "features_attributes.csv": "features_attributes",
+        "features_financials.csv": "features_financials",
+        "feature_clickstream.csv": "feature_clickstream",
+        "lms_loan_daily.csv": "lms_loan_daily"
+    }
 
-    # load data - IRL ingest from back end source system
-    df = spark.read.csv(csv_file_path, header=True, inferSchema=True).filter(col('snapshot_date') == snapshot_date)
-    print(snapshot_date_str + 'row count:', df.count())
+    for filename, table_name in datasets.items():
+        csv_path = f"{raw_data_dir}/{filename}"
 
-    # save bronze table to datamart - IRL connect to database to write
-    partition_name = "bronze_loan_daily_" + snapshot_date_str.replace('-','_') + '.csv'
-    filepath = bronze_lms_directory + partition_name
-    df.toPandas().to_csv(filepath, index=False)
-    print('saved to:', filepath)
+        print(f"Processing {filename}...")
 
-    return df
+        # Load CSV
+        df = spark.read.csv(csv_path, header=True, inferSchema=True)
+
+        # Ensure snapshot_date is DateType
+        df = df.withColumn("snapshot_date", to_date(col("snapshot_date")))
+
+        # Show row count per snapshot_date
+        counts = df.groupBy("snapshot_date").count().orderBy("snapshot_date")
+        print(f"📊 Row counts per snapshot_date for {table_name}:")
+        for row in counts.collect():
+            print(f"   {row['snapshot_date']}: {row['count']} rows")
+        
+        # Save to Bronze as partitioned Parquet (1 file per snapshot_date)
+        output_path = f"{bronze_dir}/{table_name}"
+        (
+            df
+            .coalesce(1)  # force 1 file per snapshot_date partition
+            .write
+            .mode("overwrite")
+            .partitionBy("snapshot_date")
+            .parquet(output_path)
+        )
+
+        print(f"✅ Saved Bronze table: {output_path}")
+        logger.info("Bronze layer completed.")
+
