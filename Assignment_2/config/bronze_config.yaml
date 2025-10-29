@@ -1,0 +1,12 @@
+# Input directory for raw CSVs
+raw_data_dir: "data/"
+
+# Output directory for bronze parquet tables
+bronze_dir: "datamart/bronze/"
+
+# Mapping of raw filenames to bronze table names
+datasets:
+  features_attributes.csv: "features_attributes"
+  features_financials.csv: "features_financials"
+  feature_clickstream.csv: "feature_clickstream"
+  lms_loan_daily.csv: "lms_loan_daily"

@@ -1,0 +1,119 @@
+{
+  "prediction_snapshot": "2024-06-01",
+  "label_snapshot": "2024-10-01",
+  "performance_metrics": {
+    "auc": 0.8161072386058981,
+    "gini": 0.6322144772117961,
+    "ks": 0.5187560321715817,
+    "f1": 0.4505494505494505,
+    "accuracy": 0.7991967871485943,
+    "precision": 0.7192982456140351,
+    "recall": 0.328
+  },
+  "auc_threshold_breached": false,
+  "gini_threshold_breached": false,
+  "ks_threshold_breached": false,
+  "breach_flag": false,
+  "psi_summary": [
+    {
+      "variable": "Outstanding_Debt",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0016341855471112131,
+      "csi": 0.07039673963911731,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "Interest_Rate",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.005119053829135778,
+      "csi": 0.034880840721722095,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "avg_fe_5_L3M",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.00011588522569911007,
+      "csi": 0.0070718288809907635,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "Delay_from_due_date",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0020721562809542324,
+      "csi": 0.01867391204026622,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "Credit_Utilization_Ratio",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0018450346484477926,
+      "csi": 0.007347073195155607,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "avg_fe_8_L3M",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.00025787239274813114,
+      "csi": 0.010446928379904186,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "avg_fe_4_L3M",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0007785603269618557,
+      "csi": 0.012315614428591522,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "avg_fe_10_L3M",
+      "type": "numeric",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0012542004517688897,
+      "csi": 0.014120616352662926,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "Credit_Mix",
+      "type": "categorical",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.01127079801772294,
+      "csi": 0.01127079801772294,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    },
+    {
+      "variable": "Payment_of_Min_Amount",
+      "type": "categorical",
+      "curr_snapshot": "2024-06-01",
+      "ref_snapshot": "2024_01_01",
+      "psi": 0.0028819765385786626,
+      "csi": 0.0028819765385786626,
+      "psi_category": "Stable",
+      "csi_category": "Stable"
+    }
+  ]
+}

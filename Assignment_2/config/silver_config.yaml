@@ -1,0 +1,93 @@
+directories:
+  bronze_dir: "datamart/bronze"
+  silver_dir: "datamart/silver"
+
+datasets:
+  features_attributes:
+    path: "features_attributes"
+    types:
+      Customer_ID: string
+      Name: string
+      Age: int
+      SSN: string
+      Occupation: string
+      snapshot_date: date
+    drop_nulls:
+      - Customer_ID
+
+  features_financials:
+    path: "features_financials"
+    types:
+      Customer_ID: string
+      Annual_Income: float
+      Monthly_Inhand_Salary: float
+      Num_Bank_Accounts: int
+      Num_Credit_Card: int
+      Interest_Rate: int
+      Num_of_Loan: int
+      Type_of_Loan: string
+      Delay_from_due_date: int
+      Num_of_Delayed_Payment: int
+      Changed_Credit_Limit: float
+      Num_Credit_Inquiries: int
+      Credit_Mix: string
+      Outstanding_Debt: float
+      Credit_Utilization_Ratio: float
+      Credit_History_Age: string
+      Payment_of_Min_Amount: string
+      Total_EMI_per_month: float
+      Amount_invested_monthly: float
+      Payment_Behaviour: string
+      Monthly_Balance: float
+      snapshot_date: date
+    drop_nulls:
+      - Customer_ID
+
+  feature_clickstream:
+    path: "feature_clickstream"
+    types:
+      Customer_ID: string
+      snapshot_date: date
+      fe_1: float
+      fe_2: float
+      fe_3: float
+      fe_4: float
+      fe_5: float
+      fe_6: float
+      fe_7: float
+      fe_8: float
+      fe_9: float
+      fe_10: float
+      fe_11: float
+      fe_12: float
+      fe_13: float
+      fe_14: float
+      fe_15: float
+      fe_16: float
+      fe_17: float
+      fe_18: float
+      fe_19: float
+      fe_20: float
+    drop_nulls:
+      - Customer_ID
+
+  lms_loan_daily:
+    path: "lms_loan_daily"
+    types:
+      loan_id: string
+      Customer_ID: string
+      loan_start_date: date
+      tenure: int
+      installment_num: int
+      loan_amt: float
+      due_amt: float
+      paid_amt: float
+      overdue_amt: float
+      balance: float
+      snapshot_date: date
+      mob: int
+      dpd_flag: int
+      loan_start_month: date
+      snapshot_month: date
+    drop_nulls:
+      - Customer_ID

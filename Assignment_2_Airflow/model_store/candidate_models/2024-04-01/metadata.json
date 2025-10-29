@@ -1,0 +1,598 @@
+{
+  "model_version": "credit_model_2024-04-01",
+  "timestamp": "2025-10-29 01:35:14",
+  "training_window": [
+    "2023_08_01",
+    "2024_04_01"
+  ],
+  "hp_params": {
+    "subsample": 0.6,
+    "reg_lambda": 1,
+    "reg_alpha": 0,
+    "n_estimators": 50,
+    "min_child_weight": 1,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "gamma": 0.1,
+    "colsample_bytree": 0.8
+  },
+  "cv_auc": 0.7989254391009016,
+  "results": {
+    "train": {
+      "auc": 0.89607334513663,
+      "gini": 0.7921466902732599,
+      "ks": 0.6264977148268621,
+      "f1": 0.5595959595959596,
+      "accuracy": 0.8489781780394874,
+      "precision": 0.8195266272189349,
+      "recall": 0.42484662576687116
+    },
+    "val": {
+      "auc": 0.7592107417717374,
+      "gini": 0.5184214835434748,
+      "ks": 0.43556574422793515,
+      "f1": 0.3626373626373626,
+      "accuracy": 0.7760617760617761,
+      "precision": 0.5689655172413793,
+      "recall": 0.2661290322580645
+    },
+    "test": {
+      "auc": 0.8021195946468631,
+      "gini": 0.6042391892937262,
+      "ks": 0.478900750367448,
+      "f1": 0.5,
+      "accuracy": 0.7925636007827789,
+      "precision": 0.726027397260274,
+      "recall": 0.381294964028777
+    },
+    "oot": {
+      "auc": 0.7902155887230513,
+      "gini": 0.5804311774461026,
+      "ks": 0.47566222939357267,
+      "f1": 0.42045454545454547,
+      "accuracy": 0.8011695906432749,
+      "precision": 0.5692307692307692,
+      "recall": 0.3333333333333333
+    }
+  },
+  "monitoring": {
+    "top_features_for_PSI": [
+      "Interest_Rate",
+      "Outstanding_Debt",
+      "sum_fe_10_L3M",
+      "Delay_from_due_date",
+      "Occupation_Bad",
+      "Occupation_Good",
+      "Occupation_Standard",
+      "Num_Credit_Inquiries",
+      "fe_3_LM",
+      "sum_fe_2_L3M",
+      "Changed_Credit_Limit",
+      "fe_8_LM",
+      "sum_fe_5_L3M",
+      "avg_fe_5_L3M",
+      "Num_Credit_Card",
+      "Payment_Behaviour_Low_spent_Medium_value_payments",
+      "sum_fe_9_L3M",
+      "avg_fe_10_L3M",
+      "avg_fe_9_L3M",
+      "Amount_invested_monthly"
+    ],
+    "feature_importance_gain": [
+      {
+        "feature": "Interest_Rate",
+        "gain": 38.57896423339844
+      },
+      {
+        "feature": "Outstanding_Debt",
+        "gain": 32.03629684448242
+      },
+      {
+        "feature": "sum_fe_10_L3M",
+        "gain": 19.204654693603516
+      },
+      {
+        "feature": "Delay_from_due_date",
+        "gain": 18.5477294921875
+      },
+      {
+        "feature": "Occupation_Bad",
+        "gain": 15.640670776367188
+      },
+      {
+        "feature": "Occupation_Good",
+        "gain": 15.25213623046875
+      },
+      {
+        "feature": "Occupation_Standard",
+        "gain": 14.120429039001465
+      },
+      {
+        "feature": "Num_Credit_Inquiries",
+        "gain": 14.006030082702637
+      },
+      {
+        "feature": "fe_3_LM",
+        "gain": 13.99055290222168
+      },
+      {
+        "feature": "sum_fe_2_L3M",
+        "gain": 12.730752944946289
+      },
+      {
+        "feature": "Changed_Credit_Limit",
+        "gain": 12.381560325622559
+      },
+      {
+        "feature": "fe_8_LM",
+        "gain": 12.137374877929688
+      },
+      {
+        "feature": "sum_fe_5_L3M",
+        "gain": 11.931206703186035
+      },
+      {
+        "feature": "avg_fe_5_L3M",
+        "gain": 11.616554260253906
+      },
+      {
+        "feature": "Num_Credit_Card",
+        "gain": 11.408336639404297
+      },
+      {
+        "feature": "Payment_Behaviour_Low_spent_Medium_value_payments",
+        "gain": 11.355703353881836
+      },
+      {
+        "feature": "sum_fe_9_L3M",
+        "gain": 11.336004257202148
+      },
+      {
+        "feature": "avg_fe_10_L3M",
+        "gain": 11.238308906555176
+      },
+      {
+        "feature": "avg_fe_9_L3M",
+        "gain": 10.930421829223633
+      },
+      {
+        "feature": "Amount_invested_monthly",
+        "gain": 10.523201942443848
+      },
+      {
+        "feature": "avg_fe_8_L3M",
+        "gain": 10.43257999420166
+      },
+      {
+        "feature": "fe_13_LM",
+        "gain": 10.265034675598145
+      },
+      {
+        "feature": "avg_fe_20_L3M",
+        "gain": 10.066760063171387
+      },
+      {
+        "feature": "avg_fe_7_L3M",
+        "gain": 9.999878883361816
+      },
+      {
+        "feature": "sum_fe_6_L3M",
+        "gain": 9.892854690551758
+      },
+      {
+        "feature": "fe_1_LM",
+        "gain": 9.796058654785156
+      },
+      {
+        "feature": "Num_Bank_Accounts",
+        "gain": 9.787430763244629
+      },
+      {
+        "feature": "Num_of_Delayed_Payment",
+        "gain": 9.74338436126709
+      },
+      {
+        "feature": "avg_fe_2_L3M",
+        "gain": 9.67218017578125
+      },
+      {
+        "feature": "avg_fe_15_L3M",
+        "gain": 9.473223686218262
+      },
+      {
+        "feature": "avg_fe_4_L3M",
+        "gain": 9.47215747833252
+      },
+      {
+        "feature": "Monthly_Balance",
+        "gain": 9.306705474853516
+      },
+      {
+        "feature": "sum_fe_3_L3M",
+        "gain": 9.151330947875977
+      },
+      {
+        "feature": "fe_15_LM",
+        "gain": 9.026117324829102
+      },
+      {
+        "feature": "Credit_History_Age_Months",
+        "gain": 8.986618995666504
+      },
+      {
+        "feature": "fe_11_LM",
+        "gain": 8.977889060974121
+      },
+      {
+        "feature": "fe_2_LM",
+        "gain": 8.968791961669922
+      },
+      {
+        "feature": "LoanType_Not_Specified",
+        "gain": 8.812143325805664
+      },
+      {
+        "feature": "fe_5_LM",
+        "gain": 8.792167663574219
+      },
+      {
+        "feature": "fe_9_LM",
+        "gain": 8.778249740600586
+      },
+      {
+        "feature": "avg_fe_14_L3M",
+        "gain": 8.77752685546875
+      },
+      {
+        "feature": "avg_fe_1_L3M",
+        "gain": 8.76828384399414
+      },
+      {
+        "feature": "sum_fe_1_L3M",
+        "gain": 8.690959930419922
+      },
+      {
+        "feature": "fe_14_LM",
+        "gain": 8.645812034606934
+      },
+      {
+        "feature": "avg_fe_19_L3M",
+        "gain": 8.376131057739258
+      },
+      {
+        "feature": "avg_fe_3_L3M",
+        "gain": 8.370163917541504
+      },
+      {
+        "feature": "avg_fe_11_L3M",
+        "gain": 8.293121337890625
+      },
+      {
+        "feature": "sum_fe_7_L3M",
+        "gain": 8.223249435424805
+      },
+      {
+        "feature": "LoanType_Student_Loan",
+        "gain": 8.179734230041504
+      },
+      {
+        "feature": "sum_fe_20_L3M",
+        "gain": 8.1686372756958
+      },
+      {
+        "feature": "fe_4_LM",
+        "gain": 8.072514533996582
+      },
+      {
+        "feature": "avg_fe_6_L3M",
+        "gain": 7.862771034240723
+      },
+      {
+        "feature": "Payment_Behaviour_Low_spent_Small_value_payments",
+        "gain": 7.741269111633301
+      },
+      {
+        "feature": "Credit_Utilization_Ratio",
+        "gain": 7.678297996520996
+      },
+      {
+        "feature": "sum_fe_19_L3M",
+        "gain": 7.653277397155762
+      },
+      {
+        "feature": "fe_20_LM",
+        "gain": 7.50825834274292
+      },
+      {
+        "feature": "avg_fe_17_L3M",
+        "gain": 7.479877471923828
+      },
+      {
+        "feature": "sum_fe_4_L3M",
+        "gain": 7.339076995849609
+      },
+      {
+        "feature": "fe_6_LM",
+        "gain": 7.250503063201904
+      },
+      {
+        "feature": "Monthly_Inhand_Salary",
+        "gain": 7.239217281341553
+      },
+      {
+        "feature": "avg_fe_13_L3M",
+        "gain": 7.173098564147949
+      },
+      {
+        "feature": "avg_fe_16_L3M",
+        "gain": 7.10303258895874
+      },
+      {
+        "feature": "fe_10_LM",
+        "gain": 6.909230709075928
+      },
+      {
+        "feature": "fe_18_LM",
+        "gain": 6.727439880371094
+      },
+      {
+        "feature": "fe_19_LM",
+        "gain": 6.52642822265625
+      },
+      {
+        "feature": "fe_7_LM",
+        "gain": 6.192073345184326
+      },
+      {
+        "feature": "fe_16_LM",
+        "gain": 5.998631477355957
+      },
+      {
+        "feature": "Payment_Behaviour_High_spent_Small_value_payments",
+        "gain": 5.962521076202393
+      },
+      {
+        "feature": "Annual_Income",
+        "gain": 5.639577865600586
+      },
+      {
+        "feature": "fe_12_LM",
+        "gain": 5.225803375244141
+      },
+      {
+        "feature": "sum_fe_8_L3M",
+        "gain": 4.867805480957031
+      },
+      {
+        "feature": "sum_fe_12_L3M",
+        "gain": 4.736108303070068
+      },
+      {
+        "feature": "avg_fe_18_L3M",
+        "gain": 3.9327735900878906
+      },
+      {
+        "feature": "sum_fe_15_L3M",
+        "gain": 3.5996322631835938
+      }
+    ],
+    "baseline_feature_stats": {
+      "Interest_Rate": {
+        "quantiles": [
+          4.0,
+          7.0,
+          9.0,
+          11.0,
+          13.0,
+          16.0,
+          19.0,
+          23.0,
+          30.0
+        ]
+      },
+      "Outstanding_Debt": {
+        "quantiles": [
+          231.2860046386719,
+          462.9160034179688,
+          691.1200195312504,
+          923.3699829101563,
+          1161.4100341796875,
+          1332.6679443359376,
+          1539.6399902343749,
+          2201.0120117187503,
+          3073.973974609375
+        ]
+      },
+      "sum_fe_10_L3M": {
+        "quantiles": [
+          131.0,
+          211.20000000000005,
+          268.0,
+          315.0,
+          359.0,
+          399.0,
+          448.1999999999998,
+          508.8000000000002,
+          583.4000000000001
+        ]
+      },
+      "Delay_from_due_date": {
+        "quantiles": [
+          5.0,
+          8.0,
+          11.0,
+          14.0,
+          17.0,
+          21.0,
+          26.0,
+          30.0,
+          45.0
+        ]
+      },
+      "Num_Credit_Inquiries": {
+        "quantiles": [
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          7.0,
+          9.0,
+          11.0,
+          12.0
+        ]
+      },
+      "fe_3_LM": {
+        "quantiles": [
+          -30.399999999999977,
+          15.0,
+          46.0,
+          75.0,
+          104.0,
+          130.0,
+          157.0,
+          191.0,
+          238.0
+        ]
+      },
+      "sum_fe_2_L3M": {
+        "quantiles": [
+          94.60000000000002,
+          165.0,
+          219.0,
+          266.0,
+          310.0,
+          354.0,
+          401.0,
+          458.0,
+          533.0
+        ]
+      },
+      "Changed_Credit_Limit": {
+        "quantiles": [
+          2.2360000133514406,
+          4.32400016784668,
+          6.175999832153324,
+          7.840000152587891,
+          9.220000267028809,
+          10.655999755859378,
+          12.524000358581539,
+          16.030000686645508,
+          19.170000076293945
+        ]
+      },
+      "fe_8_LM": {
+        "quantiles": [
+          -15.0,
+          30.0,
+          64.0,
+          89.0,
+          113.0,
+          138.0,
+          164.0,
+          196.0,
+          237.0
+        ]
+      },
+      "sum_fe_5_L3M": {
+        "quantiles": [
+          88.0,
+          178.0,
+          233.80000000000018,
+          276.4000000000001,
+          315.0,
+          363.0,
+          411.0,
+          463.8000000000002,
+          541.0
+        ]
+      },
+      "avg_fe_5_L3M": {
+        "quantiles": [
+          29.333333333333332,
+          59.333333333333336,
+          77.9333333333334,
+          92.13333333333337,
+          105.0,
+          121.0,
+          137.0,
+          154.60000000000005,
+          180.33333333333334
+        ]
+      },
+      "Num_Credit_Card": {
+        "quantiles": [
+          3.0,
+          4.0,
+          4.0,
+          5.0,
+          5.0,
+          6.0,
+          7.0,
+          7.0,
+          9.0
+        ]
+      },
+      "sum_fe_9_L3M": {
+        "quantiles": [
+          121.0,
+          195.0,
+          245.0,
+          293.4000000000001,
+          341.0,
+          388.0,
+          434.0,
+          489.0,
+          570.4000000000001
+        ]
+      },
+      "avg_fe_10_L3M": {
+        "quantiles": [
+          43.666666666666664,
+          70.4,
+          89.33333333333333,
+          105.0,
+          119.66666666666667,
+          133.0,
+          149.39999999999995,
+          169.60000000000005,
+          194.4666666666667
+        ]
+      },
+      "avg_fe_9_L3M": {
+        "quantiles": [
+          40.333333333333336,
+          65.0,
+          81.66666666666667,
+          97.80000000000004,
+          113.66666666666667,
+          129.33333333333334,
+          144.66666666666666,
+          163.0,
+          190.13333333333335
+        ]
+      },
+      "Amount_invested_monthly": {
+        "quantiles": [
+          44.23357009887695,
+          63.42953262329102,
+          82.2144027709961,
+          105.44386138916016,
+          131.10594177246094,
+          165.86241149902347,
+          224.3290344238281,
+          326.3145996093752,
+          558.0536254882815
+        ]
+      }
+    }
+  },
+  "data_stats": {
+    "rows_train": 2887,
+    "rows_test": 511,
+    "rows_oot": 513,
+    "y_rate_train": 0.226,
+    "y_rate_test": 0.272,
+    "y_rate_oot": 0.216
+  }
+}

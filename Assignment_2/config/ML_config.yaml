@@ -1,0 +1,52 @@
+splits:
+  train_months: 6
+  val_months: 1
+  test_months: 1
+  oot_months: 1
+
+categorical_features:
+  - Occupation
+  - Credit_Mix
+  - Payment_of_Min_Amount
+  - Payment_Behaviour
+
+imputation:
+  numeric:
+    Age: median
+    Num_Bank_Accounts: median
+    Changed_Credit_Limit: 0
+    Monthly_Balance: 0
+  categorical:
+    Occupation: Unknown
+    Credit_Mix: Unknown
+    Payment_Behaviour: Unknown
+
+scaling:
+  apply: false
+  method: standard  # or minmax
+
+model:
+  algorithm: XGBoost
+  param_grid:
+    n_estimators: [25, 50]
+    max_depth: [2, 3]
+    learning_rate: [0.01, 0.1]
+    subsample: [0.6, 0.8]
+    colsample_bytree: [0.6, 0.8]
+    gamma: [0, 0.1]
+    min_child_weight: [1, 3, 5]
+    reg_alpha: [0, 0.1, 1]
+    reg_lambda: [1, 1.5, 2]
+  scoring: roc_auc
+  n_iter: 10
+  cv_folds: 2
+
+evaluation:
+  metrics:
+    - auc
+    - gini
+    - ks
+    - f1
+    - accuracy
+    - precision
+    - recall
