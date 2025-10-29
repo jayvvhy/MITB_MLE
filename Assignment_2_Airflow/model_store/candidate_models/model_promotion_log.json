@@ -1,0 +1,9 @@
+[
+  {
+    "promoted_model": "2024-01-01",
+    "oot_auc": 0.8249823736780257,
+    "triggered_by": null,
+    "timestamp": "2025-10-29 17:45:30",
+    "reason": "monitoring_breach"
+  }
+]

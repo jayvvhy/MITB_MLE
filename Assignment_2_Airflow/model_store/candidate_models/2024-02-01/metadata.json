@@ -1,6 +1,6 @@
 {
   "model_version": "credit_model_2024-02-01",
-  "timestamp": "2025-10-29 01:32:18",
+  "timestamp": "2025-10-29 17:37:11",
   "training_window": [
     "2023_06_01",
     "2024_02_01"
@@ -16,380 +16,356 @@
     "gamma": 0.1,
     "colsample_bytree": 0.6
   },
-  "cv_auc": 0.7929399643128041,
+  "cv_auc": 0.7903599151514095,
   "results": {
     "train": {
-      "auc": 0.8855522325207057,
-      "gini": 0.7711044650414114,
-      "ks": 0.60620628704649,
-      "f1": 0.5556690500510725,
-      "accuracy": 0.8500517063081696,
-      "precision": 0.7976539589442815,
-      "recall": 0.4263322884012539
+      "auc": 0.8849129446444576,
+      "gini": 0.7698258892889152,
+      "ks": 0.6107083143440131,
+      "f1": 0.5679513184584178,
+      "accuracy": 0.8531540847983454,
+      "precision": 0.8045977011494253,
+      "recall": 0.438871473354232
     },
     "val": {
-      "auc": 0.7576226248342908,
-      "gini": 0.5152452496685815,
-      "ks": 0.4303800265134777,
-      "f1": 0.3756906077348066,
-      "accuracy": 0.7689161554192229,
-      "precision": 0.5964912280701754,
-      "recall": 0.27419354838709675
+      "auc": 0.7568714096332303,
+      "gini": 0.5137428192664606,
+      "ks": 0.4238179407865665,
+      "f1": 0.4042553191489362,
+      "accuracy": 0.7709611451942741,
+      "precision": 0.59375,
+      "recall": 0.3064516129032258
     },
     "test": {
-      "auc": 0.8273560517038777,
-      "gini": 0.6547121034077554,
-      "ks": 0.5435957696827262,
-      "f1": 0.4268292682926829,
-      "accuracy": 0.8061855670103093,
-      "precision": 0.7142857142857143,
-      "recall": 0.30434782608695654
+      "auc": 0.833207990599295,
+      "gini": 0.6664159811985899,
+      "ks": 0.5594594594594594,
+      "f1": 0.4484848484848485,
+      "accuracy": 0.8123711340206186,
+      "precision": 0.74,
+      "recall": 0.3217391304347826
     },
     "oot": {
-      "auc": 0.755833469788767,
-      "gini": 0.511666939577534,
-      "ks": 0.4318405108891436,
-      "f1": 0.39999999999999997,
-      "accuracy": 0.7741312741312741,
-      "precision": 0.5492957746478874,
-      "recall": 0.31451612903225806
+      "auc": 0.7541550679548059,
+      "gini": 0.5083101359096118,
+      "ks": 0.4364663500900606,
+      "f1": 0.3936170212765958,
+      "accuracy": 0.7799227799227799,
+      "precision": 0.578125,
+      "recall": 0.29838709677419356
     }
   },
   "monitoring": {
     "top_features_for_PSI": [
       "Outstanding_Debt",
-      "Num_of_Loan",
       "Interest_Rate",
-      "Payment_Behaviour_Bad",
+      "Occupation_Bad",
+      "Num_of_Loan",
       "Delay_from_due_date",
-      "Credit_History_Age_Months",
+      "Occupation_Good",
       "sum_fe_5_L3M",
+      "Credit_History_Age_Months",
       "sum_fe_10_L3M",
       "fe_8_LM",
+      "sum_fe_9_L3M",
       "Num_Credit_Inquiries",
-      "Payment_Behaviour_Standard",
-      "avg_fe_5_L3M",
-      "fe_10_LM",
       "sum_fe_1_L3M",
-      "avg_fe_12_L3M",
-      "sum_fe_3_L3M",
       "LoanType_Mortgage_Loan",
+      "sum_fe_3_L3M",
       "avg_fe_10_L3M",
-      "fe_5_LM",
-      "sum_fe_13_L3M"
+      "sum_fe_13_L3M",
+      "avg_fe_12_L3M",
+      "fe_10_LM",
+      "fe_2_LM"
     ],
     "feature_importance_gain": [
       {
         "feature": "Outstanding_Debt",
-        "gain": 35.1999626159668
-      },
-      {
-        "feature": "Num_of_Loan",
-        "gain": 26.418359756469727
+        "gain": 35.31889724731445
       },
       {
         "feature": "Interest_Rate",
-        "gain": 24.43501091003418
+        "gain": 25.821353912353516
       },
       {
-        "feature": "Payment_Behaviour_Bad",
-        "gain": 21.609045028686523
+        "feature": "Occupation_Bad",
+        "gain": 24.975976943969727
+      },
+      {
+        "feature": "Num_of_Loan",
+        "gain": 24.945520401000977
       },
       {
         "feature": "Delay_from_due_date",
-        "gain": 19.05524253845215
+        "gain": 16.029203414916992
       },
       {
-        "feature": "Credit_History_Age_Months",
-        "gain": 14.843751907348633
+        "feature": "Occupation_Good",
+        "gain": 13.548208236694336
       },
       {
         "feature": "sum_fe_5_L3M",
-        "gain": 12.566747665405273
+        "gain": 13.121688842773438
+      },
+      {
+        "feature": "Credit_History_Age_Months",
+        "gain": 12.58366870880127
       },
       {
         "feature": "sum_fe_10_L3M",
-        "gain": 12.017333030700684
+        "gain": 12.45648193359375
       },
       {
         "feature": "fe_8_LM",
-        "gain": 11.257257461547852
-      },
-      {
-        "feature": "Num_Credit_Inquiries",
-        "gain": 11.106460571289062
-      },
-      {
-        "feature": "Payment_Behaviour_Standard",
-        "gain": 10.657401084899902
-      },
-      {
-        "feature": "avg_fe_5_L3M",
-        "gain": 10.60195541381836
-      },
-      {
-        "feature": "fe_10_LM",
-        "gain": 10.456695556640625
-      },
-      {
-        "feature": "sum_fe_1_L3M",
-        "gain": 10.362618446350098
-      },
-      {
-        "feature": "avg_fe_12_L3M",
-        "gain": 10.276144027709961
-      },
-      {
-        "feature": "sum_fe_3_L3M",
-        "gain": 10.221449851989746
-      },
-      {
-        "feature": "LoanType_Mortgage_Loan",
-        "gain": 9.997838973999023
-      },
-      {
-        "feature": "avg_fe_10_L3M",
-        "gain": 9.93038272857666
-      },
-      {
-        "feature": "fe_5_LM",
-        "gain": 9.839273452758789
-      },
-      {
-        "feature": "sum_fe_13_L3M",
-        "gain": 9.709369659423828
-      },
-      {
-        "feature": "avg_fe_7_L3M",
-        "gain": 9.640604019165039
+        "gain": 11.80469036102295
       },
       {
         "feature": "sum_fe_9_L3M",
-        "gain": 9.44936466217041
+        "gain": 11.353885650634766
       },
       {
-        "feature": "avg_fe_9_L3M",
-        "gain": 9.432901382446289
+        "feature": "Num_Credit_Inquiries",
+        "gain": 11.346846580505371
       },
       {
-        "feature": "fe_4_LM",
-        "gain": 9.376790046691895
+        "feature": "sum_fe_1_L3M",
+        "gain": 11.083548545837402
       },
       {
-        "feature": "fe_3_LM",
-        "gain": 9.234254837036133
+        "feature": "LoanType_Mortgage_Loan",
+        "gain": 10.68130111694336
       },
       {
-        "feature": "Num_Credit_Card",
-        "gain": 9.063135147094727
+        "feature": "sum_fe_3_L3M",
+        "gain": 10.590627670288086
       },
       {
-        "feature": "Num_Bank_Accounts",
-        "gain": 9.03962516784668
+        "feature": "avg_fe_10_L3M",
+        "gain": 10.432926177978516
       },
       {
-        "feature": "Annual_Income",
-        "gain": 8.988771438598633
+        "feature": "sum_fe_13_L3M",
+        "gain": 10.370294570922852
       },
       {
-        "feature": "sum_fe_4_L3M",
-        "gain": 8.953352928161621
+        "feature": "avg_fe_12_L3M",
+        "gain": 10.360760688781738
       },
       {
-        "feature": "sum_fe_8_L3M",
-        "gain": 8.906225204467773
-      },
-      {
-        "feature": "Monthly_Inhand_Salary",
-        "gain": 8.87598991394043
-      },
-      {
-        "feature": "sum_fe_17_L3M",
-        "gain": 8.844624519348145
+        "feature": "fe_10_LM",
+        "gain": 10.30908203125
       },
       {
         "feature": "fe_2_LM",
-        "gain": 8.740891456604004
+        "gain": 10.28825855255127
       },
       {
-        "feature": "sum_fe_15_L3M",
-        "gain": 8.705235481262207
+        "feature": "fe_4_LM",
+        "gain": 10.135178565979004
       },
       {
-        "feature": "avg_fe_8_L3M",
-        "gain": 8.678607940673828
+        "feature": "fe_3_LM",
+        "gain": 9.839372634887695
       },
       {
-        "feature": "Changed_Credit_Limit",
-        "gain": 8.607095718383789
+        "feature": "avg_fe_5_L3M",
+        "gain": 9.79269790649414
       },
       {
-        "feature": "fe_16_LM",
-        "gain": 8.386828422546387
+        "feature": "avg_fe_7_L3M",
+        "gain": 9.74402904510498
       },
       {
-        "feature": "fe_1_LM",
-        "gain": 8.314898490905762
+        "feature": "avg_fe_9_L3M",
+        "gain": 9.692200660705566
       },
       {
-        "feature": "Age",
-        "gain": 8.087546348571777
+        "feature": "fe_5_LM",
+        "gain": 9.38499641418457
       },
       {
-        "feature": "Payment_of_Min_Amount_Low_spent_Medium_value_payments",
-        "gain": 8.008928298950195
+        "feature": "Num_Bank_Accounts",
+        "gain": 9.12020206451416
       },
       {
-        "feature": "avg_fe_18_L3M",
-        "gain": 7.7607035636901855
+        "feature": "sum_fe_17_L3M",
+        "gain": 8.898125648498535
       },
       {
-        "feature": "sum_fe_18_L3M",
-        "gain": 7.675731658935547
-      },
-      {
-        "feature": "avg_fe_3_L3M",
-        "gain": 7.6253581047058105
-      },
-      {
-        "feature": "avg_fe_13_L3M",
-        "gain": 7.609750270843506
-      },
-      {
-        "feature": "fe_6_LM",
-        "gain": 7.588151931762695
+        "feature": "sum_fe_4_L3M",
+        "gain": 8.84650993347168
       },
       {
         "feature": "fe_14_LM",
-        "gain": 7.5861358642578125
+        "gain": 8.78281307220459
+      },
+      {
+        "feature": "Num_Credit_Card",
+        "gain": 8.560261726379395
+      },
+      {
+        "feature": "avg_fe_8_L3M",
+        "gain": 8.312546730041504
+      },
+      {
+        "feature": "fe_1_LM",
+        "gain": 8.189498901367188
+      },
+      {
+        "feature": "Payment_of_Min_Amount_Mechanic",
+        "gain": 8.06605339050293
+      },
+      {
+        "feature": "Changed_Credit_Limit",
+        "gain": 7.898569583892822
+      },
+      {
+        "feature": "Monthly_Inhand_Salary",
+        "gain": 7.778354644775391
+      },
+      {
+        "feature": "Credit_Mix_Low_spent_Medium_value_payments",
+        "gain": 7.769323825836182
+      },
+      {
+        "feature": "avg_fe_18_L3M",
+        "gain": 7.744153022766113
+      },
+      {
+        "feature": "Occupation_Standard",
+        "gain": 7.731011390686035
+      },
+      {
+        "feature": "sum_fe_15_L3M",
+        "gain": 7.660905838012695
+      },
+      {
+        "feature": "Annual_Income",
+        "gain": 7.652610778808594
       },
       {
         "feature": "avg_fe_4_L3M",
-        "gain": 7.5479841232299805
-      },
-      {
-        "feature": "fe_20_LM",
-        "gain": 7.293162822723389
-      },
-      {
-        "feature": "sum_fe_2_L3M",
-        "gain": 7.173613548278809
-      },
-      {
-        "feature": "avg_fe_15_L3M",
-        "gain": 7.10182523727417
-      },
-      {
-        "feature": "Payment_of_Min_Amount_Low_spent_Small_value_payments",
-        "gain": 7.094115257263184
-      },
-      {
-        "feature": "fe_15_LM",
-        "gain": 7.051896095275879
-      },
-      {
-        "feature": "avg_fe_16_L3M",
-        "gain": 6.893642902374268
-      },
-      {
-        "feature": "fe_9_LM",
-        "gain": 6.787038803100586
-      },
-      {
-        "feature": "fe_17_LM",
-        "gain": 6.637311935424805
-      },
-      {
-        "feature": "fe_11_LM",
-        "gain": 6.486401081085205
-      },
-      {
-        "feature": "Monthly_Balance",
-        "gain": 6.242805004119873
-      },
-      {
-        "feature": "avg_fe_17_L3M",
-        "gain": 6.140056610107422
-      },
-      {
-        "feature": "Credit_Utilization_Ratio",
-        "gain": 6.029605865478516
+        "gain": 7.64213228225708
       },
       {
         "feature": "avg_fe_1_L3M",
-        "gain": 5.930017471313477
+        "gain": 7.453610420227051
       },
       {
-        "feature": "avg_fe_6_L3M",
-        "gain": 5.767588138580322
+        "feature": "avg_fe_13_L3M",
+        "gain": 7.378951072692871
+      },
+      {
+        "feature": "sum_fe_8_L3M",
+        "gain": 7.241224765777588
+      },
+      {
+        "feature": "avg_fe_15_L3M",
+        "gain": 7.174749851226807
       },
       {
         "feature": "fe_7_LM",
-        "gain": 5.683599472045898
+        "gain": 7.093081951141357
       },
       {
-        "feature": "sum_fe_19_L3M",
-        "gain": 5.594240188598633
+        "feature": "fe_16_LM",
+        "gain": 7.080202579498291
       },
       {
-        "feature": "sum_fe_11_L3M",
-        "gain": 5.432949066162109
+        "feature": "avg_fe_3_L3M",
+        "gain": 7.036962985992432
       },
       {
-        "feature": "Num_of_Delayed_Payment",
-        "gain": 5.3287353515625
+        "feature": "fe_6_LM",
+        "gain": 7.005989074707031
       },
       {
-        "feature": "fe_19_LM",
-        "gain": 4.996481418609619
+        "feature": "Credit_Mix_Low_spent_Small_value_payments",
+        "gain": 6.878287315368652
       },
       {
-        "feature": "avg_fe_19_L3M",
-        "gain": 4.961668491363525
+        "feature": "sum_fe_18_L3M",
+        "gain": 6.7625226974487305
+      },
+      {
+        "feature": "Credit_Utilization_Ratio",
+        "gain": 6.703674793243408
+      },
+      {
+        "feature": "avg_fe_16_L3M",
+        "gain": 6.666567325592041
       },
       {
         "feature": "fe_12_LM",
-        "gain": 4.461533546447754
+        "gain": 6.533515930175781
       },
       {
-        "feature": "LoanType_Personal_Loan",
-        "gain": 4.4420318603515625
+        "feature": "Monthly_Balance",
+        "gain": 6.461849689483643
       },
       {
-        "feature": "sum_fe_20_L3M",
-        "gain": 4.435762405395508
+        "feature": "avg_fe_17_L3M",
+        "gain": 6.429049491882324
+      },
+      {
+        "feature": "fe_20_LM",
+        "gain": 6.28785514831543
+      },
+      {
+        "feature": "Num_of_Delayed_Payment",
+        "gain": 6.259355068206787
+      },
+      {
+        "feature": "sum_fe_2_L3M",
+        "gain": 6.211565971374512
+      },
+      {
+        "feature": "Age",
+        "gain": 5.874006748199463
+      },
+      {
+        "feature": "fe_15_LM",
+        "gain": 5.752501487731934
+      },
+      {
+        "feature": "avg_fe_6_L3M",
+        "gain": 5.4301910400390625
+      },
+      {
+        "feature": "fe_9_LM",
+        "gain": 5.229369640350342
       },
       {
         "feature": "avg_fe_11_L3M",
-        "gain": 4.395866394042969
+        "gain": 5.136025905609131
       },
       {
-        "feature": "fe_18_LM",
-        "gain": 4.371553897857666
+        "feature": "fe_13_LM",
+        "gain": 5.021140098571777
       },
       {
-        "feature": "avg_fe_2_L3M",
-        "gain": 3.8032569885253906
+        "feature": "avg_fe_19_L3M",
+        "gain": 4.890542984008789
+      },
+      {
+        "feature": "fe_19_LM",
+        "gain": 3.5965943336486816
       },
       {
         "feature": "sum_fe_7_L3M",
-        "gain": 3.5333778858184814
+        "gain": 3.328092098236084
       },
       {
-        "feature": "avg_fe_20_L3M",
-        "gain": 3.499969482421875
-      },
-      {
-        "feature": "sum_fe_16_L3M",
-        "gain": 2.7348012924194336
+        "feature": "fe_18_LM",
+        "gain": 3.130577325820923
       },
       {
         "feature": "avg_fe_14_L3M",
-        "gain": 1.90777587890625
+        "gain": 1.902557373046875
       },
       {
         "feature": "LoanType_Student_Loan",
-        "gain": 1.7749614715576172
+        "gain": 1.7286224365234375
       }
     ],
     "baseline_feature_stats": {
@@ -406,19 +382,6 @@
           3115.820068359375
         ]
       },
-      "Num_of_Loan": {
-        "quantiles": [
-          0.0,
-          1.0,
-          2.0,
-          3.0,
-          3.0,
-          4.0,
-          4.0,
-          6.0,
-          7.0
-        ]
-      },
       "Interest_Rate": {
         "quantiles": [
           4.0,
@@ -430,6 +393,19 @@
           19.0,
           23.0,
           29.0
+        ]
+      },
+      "Num_of_Loan": {
+        "quantiles": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          3.0,
+          4.0,
+          4.0,
+          6.0,
+          7.0
         ]
       },
       "Delay_from_due_date": {
@@ -445,19 +421,6 @@
           44.0
         ]
       },
-      "Credit_History_Age_Months": {
-        "quantiles": [
-          86.0,
-          130.0,
-          167.0,
-          201.0,
-          225.0,
-          248.0,
-          286.9999999999998,
-          324.0,
-          365.0
-        ]
-      },
       "sum_fe_5_L3M": {
         "quantiles": [
           100.0,
@@ -469,6 +432,19 @@
           414.0,
           466.0,
           547.0
+        ]
+      },
+      "Credit_History_Age_Months": {
+        "quantiles": [
+          86.0,
+          130.0,
+          167.0,
+          201.0,
+          225.0,
+          248.0,
+          286.9999999999998,
+          324.0,
+          365.0
         ]
       },
       "sum_fe_10_L3M": {
@@ -497,6 +473,19 @@
           237.0
         ]
       },
+      "sum_fe_9_L3M": {
+        "quantiles": [
+          121.0,
+          202.0,
+          256.0,
+          303.0,
+          347.0,
+          393.0,
+          443.0,
+          499.0,
+          584.0
+        ]
+      },
       "Num_Credit_Inquiries": {
         "quantiles": [
           2.0,
@@ -508,32 +497,6 @@
           9.0,
           10.0,
           13.0
-        ]
-      },
-      "avg_fe_5_L3M": {
-        "quantiles": [
-          33.333333333333336,
-          59.333333333333336,
-          77.66666666666671,
-          93.0,
-          107.33333333333333,
-          122.66666666666667,
-          138.0,
-          155.33333333333334,
-          182.33333333333334
-        ]
-      },
-      "fe_10_LM": {
-        "quantiles": [
-          -14.0,
-          32.0,
-          64.0,
-          90.0,
-          117.0,
-          141.0,
-          169.0,
-          201.0,
-          246.0
         ]
       },
       "sum_fe_1_L3M": {
@@ -549,17 +512,17 @@
           531.0
         ]
       },
-      "avg_fe_12_L3M": {
+      "LoanType_Mortgage_Loan": {
         "quantiles": [
-          23.333333333333332,
-          49.0,
-          68.0,
-          82.0,
-          97.66666666666667,
-          112.33333333333333,
-          128.99999999999991,
-          147.66666666666666,
-          173.0
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0
         ]
       },
       "sum_fe_3_L3M": {
@@ -575,19 +538,6 @@
           536.0
         ]
       },
-      "LoanType_Mortgage_Loan": {
-        "quantiles": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          1.0,
-          1.0,
-          1.0
-        ]
-      },
       "avg_fe_10_L3M": {
         "quantiles": [
           42.666666666666664,
@@ -601,19 +551,6 @@
           193.66666666666666
         ]
       },
-      "fe_5_LM": {
-        "quantiles": [
-          -22.0,
-          24.0,
-          55.0,
-          83.0,
-          107.0,
-          133.0,
-          161.0,
-          193.0,
-          240.0
-        ]
-      },
       "sum_fe_13_L3M": {
         "quantiles": [
           84.0,
@@ -625,6 +562,45 @@
           394.0,
           453.0,
           525.0
+        ]
+      },
+      "avg_fe_12_L3M": {
+        "quantiles": [
+          23.333333333333332,
+          49.0,
+          68.0,
+          82.0,
+          97.66666666666667,
+          112.33333333333333,
+          128.99999999999991,
+          147.66666666666666,
+          173.0
+        ]
+      },
+      "fe_10_LM": {
+        "quantiles": [
+          -14.0,
+          32.0,
+          64.0,
+          90.0,
+          117.0,
+          141.0,
+          169.0,
+          201.0,
+          246.0
+        ]
+      },
+      "fe_2_LM": {
+        "quantiles": [
+          -30.0,
+          16.0,
+          46.000000000000114,
+          76.0,
+          100.0,
+          127.00000000000023,
+          156.99999999999977,
+          187.0,
+          233.0
         ]
       }
     }

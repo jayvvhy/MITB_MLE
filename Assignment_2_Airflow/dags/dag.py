@@ -59,4 +59,9 @@ with DAG(
         bash_command="python /opt/airflow/utils/model_monitoring.py --snapshot_date {{ ds }}",
     )
 
-    bronze_task >> silver_task >> gold_task >> model_train_task >> promote_best_task >> inference_task >> monitoring_task
+    update_registry_task = BashOperator(
+        task_id="update_model_registry",
+        bash_command="python /opt/airflow/utils/update_model_registry.py"
+    )
+
+    bronze_task >> silver_task >> gold_task >> promote_best_task >> model_train_task >> update_registry_task >> inference_task >> monitoring_task

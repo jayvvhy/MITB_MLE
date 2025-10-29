@@ -2,13 +2,13 @@
   "prediction_snapshot": "2024-08-01",
   "label_snapshot": "2024-12-01",
   "performance_metrics": {
-    "auc": 0.7473894348894349,
-    "gini": 0.49477886977886976,
-    "ks": 0.4724129209423327,
-    "f1": 0.2430939226519337,
-    "accuracy": 0.7476979742173112,
-    "precision": 0.4888888888888889,
-    "recall": 0.16176470588235295
+    "auc": 0.7462693308281545,
+    "gini": 0.492538661656309,
+    "ks": 0.4723948547477959,
+    "f1": 0.3333333333333333,
+    "accuracy": 0.7495395948434622,
+    "precision": 0.5,
+    "recall": 0.25
   },
   "auc_threshold_breached": false,
   "gini_threshold_breached": true,

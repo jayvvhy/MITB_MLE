@@ -2,18 +2,18 @@
   "prediction_snapshot": "2024-07-01",
   "label_snapshot": "2024-11-01",
   "performance_metrics": {
-    "auc": 0.7508874458874458,
-    "gini": 0.5017748917748917,
-    "ks": 0.4517316017316017,
-    "f1": 0.2891566265060241,
-    "accuracy": 0.7663366336633664,
-    "precision": 0.5217391304347826,
-    "recall": 0.2
+    "auc": 0.7456818181818182,
+    "gini": 0.49136363636363645,
+    "ks": 0.445995670995671,
+    "f1": 0.36649214659685864,
+    "accuracy": 0.7603960396039604,
+    "precision": 0.49295774647887325,
+    "recall": 0.2916666666666667
   },
   "auc_threshold_breached": false,
-  "gini_threshold_breached": false,
+  "gini_threshold_breached": true,
   "ks_threshold_breached": false,
-  "breach_flag": false,
+  "breach_flag": true,
   "psi_summary": [
     {
       "variable": "Outstanding_Debt",
